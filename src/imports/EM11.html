@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Event Management System </title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0; padding: 0;
+      background: #f4f4f9;
+    }
+    header {
+      background: #4CAF50; color: white;
+      padding: 15px; text-align: center;
+    }
+    nav {
+      background: #333; padding: 10px;
+    }
+    nav a {
+      color: white; margin: 0 15px;
+      text-decoration: none;
+    }
+    .container {
+      padding: 20px;
+    }
+    .form-section {
+      background: white;
+      padding: 20px;
+      margin-bottom: 20px;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+    .form-section h2 {
+      margin-top: 0;
+      color: #4CAF50;
+    }
+    label {
+      display: block;
+      margin: 10px 0 5px;
+    }
+    input, select, button {
+      width: 100%; padding: 10px;
+      margin-bottom: 15px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+    button {
+      background: #4CAF50; color: white;
+      border: none; cursor: pointer;
+    }
+    button:hover {
+      background: #45a049;
+    }
+    footer {
+      background: #333; color: white;
+      text-align: center; padding: 10px;
+      position: fixed; bottom: 0; width: 100%;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Event Management System (Selaivoyal)</h1>
+    <p>Book Venues, Vendors, DJs & Artists</p>
+  </header>
+
+  <nav>
+    <a href="#venue">Venue</a>
+    <a href="#vendor">Vendor</a>
+    <a href="#dj">DJ</a>
+    <a href="#artist">Artists</a>
+  </nav>
+
+  <div class="container">
+    <!-- Venue Booking -->
+    <div class="form-section" id="venue">
+      <h2>Book a Venue</h2>
+      <form>
+        <label for="venueName">Venue Name</label>
+        <select id="venueName">
+          <option>SK Mahal</option>
+          <option>Lakshmi Mahal</option>
+          <option>Royal Mahal</option>
+          <option>Anand Mahal</option>
+          <option>SM Mahal</option>
+        </select>
+
+        <label for="venueDate">Date</label>
+        <input type="date" id="venueDate">
+
+        <label for="venueCapacity">Capacity</label>
+        <input type="number" id="venueCapacity" placeholder="Number of guests">
+
+        <button type="button" onclick="submitForm('Venue')">Book Venue</button>
+      </form>
+    </div>
+
+    <!-- Vendor Booking -->
+    <div class="form-section" id="vendor">
+      <h2>Book a Vendor</h2>
+      <form>
+        <label for="vendorType">Vendor Type</label>
+        <select id="vendorType">
+          <option>Catering</option>
+          <option>Decoration</option>
+          <option>Photography</option>
+        </select>
+
+        <label for="vendorName">Vendor Name</label>
+        <select id="vendorName">
+          <option>Delicious Caterers</option>
+          <option>Elegant Decorators</option>
+          <option>Memories Photography</option>
+        </select>
+
+        <button type="button" onclick="submitForm('Vendor')">Book Vendor</button>
+   <!-- DJ Booking -->
+    <div class="form-section" id="dj">
+      <h2>Book a DJ</h2>
+      <form>
+        <label for="djName">DJ Name</label>
+        <input type="text" id="djName" placeholder="Enter DJ name">
+
+        <label for="djGenre">Music Genre</label>
+        <select id="djGenre">
+          <option>EDM</option>
+          <option>Hip-Hop</option>
+          <option>Bollywood</option>
+          <option>Classical</option>
+        </select>
+
+        <button type="button" onclick="submitForm('DJ')">Book DJ</button>
+      </form>
+    </div>
+
+    <!-- Instrumental Artist Booking -->
+    <div class="form-section" id="artist">
+      <h2>Book an Instrumental Artist</h2>
+      <form>
+        <label for="artistName">Artist Name</label>
+        <input type="text" id="artistName" placeholder="Enter artist name">
+
+        <label for="instrument">Instrument</label>
+        <select id="instrument">
+          <option>Guitar</option>
+          <option>Violin</option>
+          <option>Flute</option>
+          <option>Tabla</option>
+        </select>
+
+        <button type="button" onclick="submitForm('Artist')">Book Artist</button>
+      </form>
+    </div>
+  </div>
+
+  <footer>
+    <p>&copy; 2026 Event Management System</p>
+  </footer>
+
+  <script>
+    function submitForm(type) {
+      alert(type + " booking submitted successfully!");
+    }
+  </script>
+</body>
+</html>
